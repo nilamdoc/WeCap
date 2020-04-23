@@ -14,7 +14,7 @@
 	<?php echo $this->html->charset();?>
 	<title>WeCapacitate &gt; <?php echo $this->title(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Raleway|Roboto+Mono&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Raleway|Roboto+Mono|Comix_Neue&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="/framework7/css/framework7.bundle.min.css" rel="stylesheet" type="text/css">
 	<link href="/css/icons.css" rel="stylesheet" type="text/css">
