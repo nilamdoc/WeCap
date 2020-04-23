@@ -14,7 +14,7 @@ class XController extends \lithium\action\Controller {
 	public function index(){
 		return $this->render(array('json' => array("success"=>"Yes")));		
 	}
-	public function preview(){
+	public function p(){
 		
 	}
 }
