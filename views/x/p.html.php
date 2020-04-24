@@ -19,6 +19,6 @@
 <img src="/img/brochure018.jpg" id="bg" alt="">
 <img src="/img/brochure019.jpg" id="bg" alt="">
 <img src="/img/brochure020.jpg" id="bg" alt="">
-<a href="https://forms.gle/7bfp82eRuM3JZb1y7" class="link external  button button-round button-outline color-black" >I want to join</a>
+<a href="https://forms.gle/7bfp82eRuM3JZb1y7" class="link external  button button-round button-outline color-black " >I want to join</a>
 </div>
 	

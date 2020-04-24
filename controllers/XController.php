@@ -1,6 +1,8 @@
 <?php
 namespace app\controllers;
 
+use app\models\Meetings;
+
 class XController extends \lithium\action\Controller {
 
 	 protected function _init() {
@@ -16,5 +18,8 @@ class XController extends \lithium\action\Controller {
 	}
 	public function p(){
 		
+	}
+	public function zoom(){
+		$meetings = Meetings::find('all');
 	}
 }

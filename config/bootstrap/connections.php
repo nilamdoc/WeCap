@@ -12,7 +12,7 @@ use lithium\data\Connections;
  	'database' => CONNECTION_DB,
 	'login' => CONNECTION_USER,
 	'password' => CONNECTION_PASS,	
-	//'classes' => array('server' => 'Mongo')
+//'classes' => array('server' => 'Mongo')
 //	'setSlaveOkay' => true,
 //	'readPreference' => Mongo::RP_NEAREST	
  ));
