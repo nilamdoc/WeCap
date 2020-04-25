@@ -20,6 +20,14 @@ class XController extends \lithium\action\Controller {
 		
 	}
 	public function zoom(){
+		
+		if($this->request->data){
+			
+			
+		}
+		
+		
 		$meetings = Meetings::find('all');
+		return compact('meetings');
 	}
 }
