@@ -3,6 +3,7 @@ namespace app\controllers;
 
 use google\apiclient\src\Google\Client;
 use app\models\Meetings;
+use app\models\Users;
 
 class XController extends \lithium\action\Controller {
 
@@ -19,7 +20,10 @@ class XController extends \lithium\action\Controller {
 	}
 	public function p(){
 		
+		
 	}
+	
+	
 	public function zoom(){
 		
 		if($this->request->data){
@@ -27,7 +31,8 @@ class XController extends \lithium\action\Controller {
 			
 		}
 		$meetings = Meetings::find('all');
-		return compact('meetings');
+		$users = Users::find('all');
+		return compact('meetings','users');
 	}
 
 

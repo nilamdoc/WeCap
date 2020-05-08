@@ -1,5 +1,5 @@
 var $$ = Dom7;
-var server = "https://englishtolead/";
+var server = "https://wecap/";
 var storage = "ETL";
  
 var app = new Framework7({
@@ -382,4 +382,28 @@ function saveAttachment(){
  });
 	
 	return false;
+}
+
+function AddUser(){
+	var userName = $$("#userName").val();
+	var referName = $$("#referName").val();
+	var monthJoin = $$("#monthJoin").val();
+	console.log(userName);
+	console.log(referName);
+	app.preloader.show();
+
+	var submitURL = server + 'network/addUser/';
+ var formData = new FormData();
+	formData.append('userName', userName);
+	formData.append('referName', referName);
+	formData.append('monthJoin', monthJoin);
+
+ app.request.post(submitURL, formData, function (data) {
+	  app.preloader.hide();
+			return true;
+ }, function () {
+  toastTopNoInternet.open();
+  app.preloader.hide();
+ });
+	
 }
