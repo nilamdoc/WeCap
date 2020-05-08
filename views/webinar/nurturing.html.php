@@ -1,5 +1,5 @@
 <div class="block padding text-align-center ">
-<img src="/img/NurturingRelationShip.png"  style="80vw">
+<img src="/img/NurturingRelationShip.png"  style="width:80vw">
 </div>
 
 <div class="text-align-justify block">
@@ -50,8 +50,6 @@ text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
 
 			<div class="popup popup-about">
 					<div class="block">
-					<p>About</p>
-					<!-- Close Popup -->
 					<p><a class="link popup-close" href="#">Close popup</a></p>
 						<div class="videoWrapper">
 								<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1UtMvzoS1rXt4MXqnTUvLWA8xNX6YCLH5zlnbZCwONKbMYA/viewform?embedded=true" width="640" height="675" frameborder="0" 	marginheight="0" marginwidth="0">Loading…</iframe>
