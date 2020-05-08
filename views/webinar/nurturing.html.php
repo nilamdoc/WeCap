@@ -1,5 +1,5 @@
 <div class="block padding text-align-center ">
-<img src="/img/NurturingRelationShip.png"  style="width:80vw">
+<img src="/img/NurturingRelationShip.jpg"  style="width:80vw">
 </div>
 
 <div class="text-align-justify block">
