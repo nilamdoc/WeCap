@@ -23,7 +23,7 @@ class XController extends \lithium\action\Controller {
 		
 		
 	}
-	public function preview(){
+	public function product(){
 		
 		
 	}

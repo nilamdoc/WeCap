@@ -4,7 +4,22 @@
 			<div><h3>Sapne - Azadi.pdf</h3>
 	<a href="https://sff.team/img/documents/Azadi-Sapne.pdf" class="link external">Download</a>
 	</div>
+			<div><h3>Dawn to Dusk</h3>
+	<a href="https://sff.team/img/documents/Dawn_to_Dusk.pdf" class="link external">Download</a>
+	</div>
+	
+			<div><h3>Parivartan</h3>
+	<a href="https://sff.team/img/documents/ENGLISH-Parivarthan2019.pdf" class="link external">Download</a>
+	</div>
+			<div><h3>Shuruat</h3>
+	<a href="https://sff.team/img/documents/Shuruaat for LMS.pdf" class="link external">Download</a>
+	</div>
 
+			<div><h3>Raftaar.pdf</h3>
+	<a href="https://sff.team/img/documents/Raftaar.pdf" class="link external">Download</a>
+	</div>
+	
+	
 			<div><h3>Personal Care SPBM.pdf</h3>
 	<a href="https://app.box.com/s/jwxlfluxxf18kkqbd3t474298f8ielpp" class="link external">Download</a>
 	</div>
@@ -44,9 +59,6 @@
 	</div>
 			<div><h3>NCO NEW - FINAL SPBM.pdf</h3>
 	<a href="https://app.box.com/s/5hq8u6mjmlyfo5nyh09n41mlwcaaemp2" class="link external">Download</a>
-	</div>
-				<div><h3>Loyalty.pdf</h3>
-	<a href="https://app.box.com/s/rfl4b548hb4dq9zbnmi0b53y93biue22" class="link external">Download</a>
 	</div>
 </div>
 	
