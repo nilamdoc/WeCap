@@ -1,8 +1,8 @@
 <h1 class="Rale text-align-center sz6">We <span class="text-color-red">Capacitate</span></h1>
 
 <div class="Bebas sz4 text-align-center">
-<img src="/img/wecap-theusu.jpg" style="width:80vw"><br>	
-I would like to attent the discovery and preview session.
+
+I would like to attend the discovery and preview session.
 </div>
 <div class="block text-align-center">
 <a href="" class="color-red Bebas  sz5 popup-open link color-blue" data-popup=".popup-about">FREE Webinar</a>
