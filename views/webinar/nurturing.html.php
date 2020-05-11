@@ -35,7 +35,7 @@
 <p>
 How can any prospect make a logical buying decision with all of this going on? They mostly can’t. A decision on a proposal during this time could be a death wish for their career if they get it wrong.</p>
 <h2 class="flame padding text-align-center">To know more about Nurturing Relationships register for a <br><a href="" class="color-red  popup-open link" data-popup=".popup-about">FREE Webinar</a></h2>
-        <p><a class="button" href="#" >Open About Popup</a></p>
+        
 
 
 </div>
