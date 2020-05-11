@@ -1,10 +1,10 @@
 <div class="text-align-center">
 <p class="Bebas sz1">Thank you for attending our discovery session. We request you to go through the product catalogue and company profile 
 </p>
-			<div><h3>Sapne - Azadipdf</h3>
+			<div><h3>Sapne - Azadi.pdf</h3>
 	<a href="https://sff.team/img/documents/Azadi-Sapne.pdf" class="link external">Download</a>
 	</div>
-
+<br><a href="https://forms.gle/7bfp82eRuM3JZb1y7" class="link external  button button-round button-outline color-black button-fill" >I want to join</a><br><br>
 			<div><h3>Personal Care SPBM.pdf</h3>
 	<a href="https://app.box.com/s/jwxlfluxxf18kkqbd3t474298f8ielpp" class="link external">Download</a>
 	</div>
