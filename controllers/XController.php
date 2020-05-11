@@ -28,6 +28,10 @@ class XController extends \lithium\action\Controller {
 		
 	}
 	
+	public function join(){
+		
+		
+	}
 	
 	public function zoom(){
 		
