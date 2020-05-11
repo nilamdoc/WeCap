@@ -27,6 +27,10 @@ class XController extends \lithium\action\Controller {
 		
 		
 	}
+	public function discovery(){
+		
+		
+	}
 	
 	public function join(){
 		
