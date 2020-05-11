@@ -42,7 +42,7 @@
 </div>
 	<script src="/framework7/js/framework7.bundle.js"></script>
 	<script src="/js/app.js"></script>
+	<script>
+	</script>
 </body>
 </html>
-<script>
-</script>

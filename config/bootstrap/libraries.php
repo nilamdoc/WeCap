@@ -80,5 +80,5 @@ if (file_exists($file = LITHIUM_LIBRARY_PATH . '/autoload.php')) {
 		require $file;
 }
 
-
+Libraries::add('google-apiclient', array( 	'bootstrap' => 'src/Google/Client.php' ));
 ?>
