@@ -5,7 +5,13 @@ I would like to attend the discovery and preview session for a business opportun
 <p>Let your business <br>inspire the world</p>
 </div>
 <div class="block text-align-center">
-<a href="" class="color-red Bebas  sz5 popup-open link color-blue" data-popup=".popup-about">FREE Webinar</a>
+<a href="" class="color-red Bebas  sz5 popup-open link color-blue" data-popup=".popup-about">FREE Webinar</a><br>
+Daily at 2:30 pm on Zoom
+<!-- <a href="https://us02web.zoom.us/s/7597219319?pwd=RWVoU1o4QlY3ajhiVHRFT1pjMUNFdz09" class="link external">Zoom</a>
+<br>Meeting ID: 7597219319
+<br>Password  : 45678988
+--><br>Meeting details will be sent to you by SMS after registration
+<br><a href="" class="color-red Bebas  sz5 popup-open link color-blue" data-popup=".popup-about">I want to Join</a><br>
 </div>
 
 			<div class="popup popup-about">
