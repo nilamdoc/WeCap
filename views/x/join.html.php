@@ -1,3 +1,4 @@
+<h1 class="Rale text-align-center sz6">We <span class="text-color-red">Capacitate</span></h1>
 <div class="text-align-center">
 <p class="Bebas sz1">Thank you for attending our discovery session. We request you to go through the product catalogue and company profile 
 </p>
@@ -20,9 +21,6 @@
 	</div>
 
 <br><a href="https://forms.gle/7bfp82eRuM3JZb1y7" class="link external  button button-round button-outline color-black button-fill" >I want to join the inner circle</a><br><br>
-
-
-
 
 </div>
 	

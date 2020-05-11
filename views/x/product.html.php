@@ -1,3 +1,4 @@
+<h1 class="Rale text-align-center sz6">We <span class="text-color-red">Capacitate</span></h1>
 <div class="text-align-center">
 <p class="Bebas sz1">Thank you for attending our discovery session. We request you to go through the product catalogue and company profile 
 </p>
@@ -7,7 +8,6 @@
 			<div><h3>Dawn to Dusk</h3>
 	<a href="https://sff.team/img/documents/Dawn_to_Dusk.pdf" class="link external">Download</a>
 	</div>
-	
 			<div><h3>Parivartan</h3>
 	<a href="https://sff.team/img/documents/ENGLISH-Parivarthan2019.pdf" class="link external">Download</a>
 	</div>
