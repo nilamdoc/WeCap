@@ -176,25 +176,56 @@ public function checkuser(){
 	 $steps = Steps::find('all',array(
 			'order'=>array('_id'=>'ASC')
 		));
+			$data = $this->getSteps();
+			
 	
 		if($this->request->data){		
 			$mobile = $this->request->data['mobile'];
 			$conditions = array("mobile"=>(string)$this->request->data['mobile']);
 			$user = Users::find('first',array(
-   'conditions'=>$conditions,
-		));
-			
-		if(count($user)==1){
-			
-			if($user['steps']){
-				
-					
-			}else{
-				$step = 'Discovery';
+				'conditions'=>$conditions,
+			));
+			//print_r($data['alldata']);
+			$allsteps = array();
+			foreach ($data['alldata'] as $kda=>$vda){
+				foreach($vda as $kds=>$vds){
+					foreach($vds as $ksheet=>$vsheet){
+						foreach($vsheet as $k){
+								if($k['Mobile']==$mobile){
+									// print_r($k['Mobile']);
+									// print_r($ksheet);
+									// print_r($kds);
+									$completed = $kds;
+									array_push($allsteps,$completed);
+									break;
+								}
+						}
+					}
+				}
 			}
-			
-			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,'steps'=>$steps,'step'=>$step)));		
+
+		$data = array('steps'=>$allsteps);
+		$conditions = array('mobile'=>(string)$mobile);
+		Users::update($data,$conditions);
+		$user = Users::find('first',array(
+			'conditions'=>$conditions,
+		));
+		$string = "";
+		foreach($user['steps'] as $s){
+			$string = $s . "," . $string	;
 		}
+		$string = explode(",",$string);
+		
+		
+	 $nextsteps = Steps::find('first',array(
+			'conditions'=>array('Step'=>array('$nin'=>$string))
+		));
+		
+		
+
+				$step = 'Discovery';
+			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,'steps'=>$steps,'step'=>$nextsteps )));		
+
 		return $this->render(array('json' => array("success"=>"No")));		
 	}
 	return $this->render(array('json' => array("success"=>"No")));		
