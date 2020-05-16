@@ -185,7 +185,15 @@ public function checkuser(){
 		));
 			
 		if(count($user)==1){
-			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,'steps'=>$steps)));		
+			
+			if($user['steps']){
+				
+				
+			}else{
+				$step = 'Discover us';
+			}
+			
+			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,'steps'=>$steps,'step'=>$step)));		
 		}
 		return $this->render(array('json' => array("success"=>"No")));		
 	}
