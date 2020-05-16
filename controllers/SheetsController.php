@@ -119,9 +119,9 @@ public function sendsms (){
 			
 			Users::update($data,$conditions);
 			$function = new Functions();
-			$msg = "". $otp . " is the OTP for English To Lead registration in the app";
-			$returncall = $function->twilio($mobile,$msg,$otp);	 // Testing if it works 
-			$returnsms = $function->sendSms($mobile,$msg);	 // Testing if it works 
+			$msg = "". $otp . " is the OTP for We Capacitate registration in the app";
+			$returncall = $function->twilio("+91".$mobile,$msg,$otp);	 // Testing if it works 
+			$returnsms = $function->sendSms("+91".$mobile,$msg);	 // Testing if it works 
 			$user = Users::find('first',array(
    'conditions'=>$conditions
 			));
@@ -138,9 +138,9 @@ public function sendsms (){
 				);
 				Users::create()->save($data);
 				$function = new Functions();
-				$msg = "". $otp . " is the OTP for English To Lead registration in the app";
-				$returncall = $function->twilio($mobile,$msg,$otp);	 // Testing if it works 
-				$returnsms = $function->sendSms($mobile,$msg);	 // Testing if it works 
+				$msg = "". $otp . " is the OTP for We Capacitate registration in the app";
+				$returncall = $function->twilio("+91".$mobile,$msg,$otp);	 // Testing if it works 
+				$returnsms = $function->sendSms("+91".$mobile,$msg);	 // Testing if it works 
 				$user = Users::find('first',array(
 					'conditions'=>$conditions
 					));
