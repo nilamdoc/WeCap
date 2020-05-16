@@ -188,9 +188,9 @@ public function checkuser(){
 			
 			if($user['steps']){
 				
-				
+					
 			}else{
-				$step = 'Discover us';
+				$step = 'Discovery';
 			}
 			
 			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,'steps'=>$steps,'step'=>$step)));		
