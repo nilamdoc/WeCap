@@ -1,6 +1,7 @@
 <?php
 namespace app\controllers;
 
+use app\extensions\action\Functions;
 use Google_Service_Sheets;
 use app\extensions\action\Google;
 use app\models\Meetings;
@@ -71,16 +72,16 @@ if (empty($values)) {
         // Print columns A and E, which correspond to indices 0 and 4.
        //printf("%s, %s,%s,%s,%s,%s, %s\n\n", $row[0],$row[1],$row[2],$row[3],'+91'.$row[4],$row[5], '+91'.$row[6]);
 								array_push($names, array(
-									'time'=>$row[0],
-									'email'=>$row[1],
+									'name'=>$row[0],
+									'mobile'=>$row[1],
 									'boxes'=>$row[2],
-									'name'=>$row[3],
-									'mobile'=>$row[4],
+									'time'=>$row[3],
+									'email'=>$row[4],
 									'date'=>$row[5],
 									'occupation'=>$row[6],
 									'address'=>$row[7],
 									'commit'=>$row[8],
-									'signature'=>$row[9],
+									'signature'=>$row[9]?:"",
 									)
 									);
     }
@@ -90,7 +91,28 @@ return compact('names');
 	
 }
 
+public function sendsms (){
+	if ($this->request->data){
+		$function = new Functions();
+		$mobiles = $this->request->data['mobiles'];
+		$message = str_replace("<div>","",$this->request->data['message']);
+		$message = str_replace("</div>","",$message);
+		$message = str_replace("<br>","\n",$message);
 
+		$users = split(",",$mobiles);
+		
+		foreach($users as $u){
+			$mobile = split('#',$u);
+//			$returncall = $function->twilio('+91'.$mobile[0],"Testing",'45678988');	 // Testing if it works 
+			$returnsms = $function->sendSms('+91'.$mobile[0],$message);	 // Testing if it works 	
+		}
+		$data = array(
+			'u'=>$users,
+			'm'=>$message
+			);
+	}
+		return $this->render(array('json' => array("success"=>"Yes",'data'=>$data)));		
+}
 
 }
 ?>

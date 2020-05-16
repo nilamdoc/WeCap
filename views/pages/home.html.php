@@ -8,6 +8,11 @@ I would like to attend the discovery and preview session.
 <a href="" class="color-red Bebas  sz5 popup-open link color-blue" data-popup=".popup-about">FREE Webinar</a>
 </div>
 
+<div class="block text-align-center">
+I am already a member of the inner circle
+</div>
+
+
 			<div class="popup popup-about">
 					<div class="block">
 					<p><a class="link popup-close" href="#">Close popup</a></p>

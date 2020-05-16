@@ -407,3 +407,36 @@ function AddUser(){
  });
 	
 }
+
+function SendSMS(){
+var message	= $$("#message").val();
+	var checkboxes = $$('input[name="mobile[]"]:checked');
+	
+var vals = "";
+for (var i=0, n=checkboxes.length;i<n;i++) 
+{
+    if (checkboxes[i].checked) 
+    {
+        vals += ","+checkboxes[i].value;
+    }
+}
+if (vals) {
+	vals = vals.substring(1);
+}
+	console.log(vals);
+	console.log(message);
+	
+	var submitURL = server + 'x/sendsms/';
+ var formData = new FormData();
+	formData.append('message', message);
+	formData.append('mobiles', vals);
+
+ app.request.post(submitURL, formData, function (data) {
+	  app.preloader.hide();
+			return true;
+ }, function () {
+  toastTopNoInternet.open();
+  app.preloader.hide();
+ });
+	
+}

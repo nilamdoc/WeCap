@@ -382,6 +382,7 @@ $fields = array (
     'To' => $to,
     'Body' => $body,
 );
+
 $post = http_build_query($fields);
 $curl = curl_init($url);
 // Set some options - we are passing in a useragent too here
