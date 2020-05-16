@@ -173,8 +173,11 @@ public function sendsms (){
 }
 
 public function checkuser(){
-		if($this->request->data){
-		
+	 $steps = Steps::find('all',array(
+			'order'=>array('_id'=>'ASC')
+		));
+	
+		if($this->request->data){		
 			$mobile = $this->request->data['mobile'];
 			$conditions = array("mobile"=>(string)$this->request->data['mobile']);
 			$user = Users::find('first',array(
@@ -182,7 +185,7 @@ public function checkuser(){
 		));
 			
 		if(count($user)==1){
-			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,)));		
+			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,'steps'=>$steps)));		
 		}
 		return $this->render(array('json' => array("success"=>"No")));		
 	}
