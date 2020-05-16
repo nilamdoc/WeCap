@@ -172,7 +172,22 @@ public function sendsms (){
 	}
 }
 
-
+public function checkuser(){
+		if($this->request->data){
+		
+			$mobile = $this->request->data['mobile'];
+			$conditions = array("mobile"=>(string)$this->request->data['mobile']);
+			$user = Users::find('first',array(
+   'conditions'=>$conditions,
+		));
+			
+		if(count($user)==1){
+			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,)));		
+		}
+		return $this->render(array('json' => array("success"=>"No")));		
+	}
+	return $this->render(array('json' => array("success"=>"No")));		
+}
 
 
 
