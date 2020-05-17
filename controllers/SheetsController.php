@@ -174,7 +174,7 @@ public function sendsms (){
 
 public function checkuser(){
 	 $steps = Steps::find('all',array(
-			'order'=>array('_id'=>'ASC')
+			'order'=>array('Order'=>'ASC')
 		));
 			$data = $this->getSteps();
 			
@@ -216,9 +216,9 @@ public function checkuser(){
 		}
 		$string = explode(",",$string);
 		
-		
-	 $nextsteps = Steps::find('first',array(
-			'conditions'=>array('Step'=>array('$nin'=>$string))
+		$nextsteps = Steps::find('first',array(
+			'conditions'=>array('Step'=>array('$nin'=>$string)),
+			'order'=>array('Order'=>'ASC')
 		));
 		
 		
