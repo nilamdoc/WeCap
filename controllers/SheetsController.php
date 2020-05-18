@@ -220,13 +220,7 @@ public function checkuser(){
 			'conditions'=>array('Step'=>array('$nin'=>$string)),
 			'order'=>array('Order'=>'ASC')
 		));
-		
-		
-
-				$step = 'Discovery';
-			return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,'steps'=>$steps,'step'=>$nextsteps )));		
-
-		return $this->render(array('json' => array("success"=>"No")));		
+		return $this->render(array('json' => array("success"=>"Yes",'user'=>$user,'steps'=>$steps,'step'=>$nextsteps,'nin'=>$string )));		
 	}
 	return $this->render(array('json' => array("success"=>"No")));		
 }
