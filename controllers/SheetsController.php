@@ -6,6 +6,8 @@ use Google_Service_Sheets;
 use app\extensions\action\Google;
 use app\models\Users;
 use app\models\Steps;
+use app\controllers\PersonalityController;
+
 
 use app\extensions\action\GoogleAuthenticator;
 
@@ -226,7 +228,14 @@ public function checkuser(){
 }
 
 
-
+public function getnpt(){
+	$personality = new PersonalityController();
+	
+	$npt = $personality->npt();
+	
+	return $this->render(array('json' => array("success"=>"Yes",'questions'=>$npt)));
+	
+}
 
 
 
