@@ -1,7 +1,7 @@
 <?php
 namespace app\controllers;
 
-use app\models\nptquestions;
+use app\models\Nptquestions;
 
 class PersonalityController extends \lithium\action\Controller {
 
