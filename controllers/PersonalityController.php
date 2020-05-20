@@ -34,7 +34,7 @@ public function npt(){
 			)
 		);
 	}
-	return compact('allquestions');
+	return $allquestions;
 }
 
 
