@@ -38,6 +38,29 @@ public function npt(){
 }
 
 
+public function persons(){
+	$persons = nptpersons::find('all',array(
+		'order'=>array('Name'=>'ASC')
+	));
+	$allpersons = array();
+	foreach($persons as $p){
+		array_push($allpersons,
+			array(
+				'Name'=>$p['Name'],
+				'Type'=>$p['Type'],
+			)
+		);
+	}
+	return $allpersons;
+}
+
+public function register(){
+	if($this->request->data){
+		$user = nptusers::create()->save($this->request->data);
+		return true;
+	}
+	return true;
+}
 
 
 

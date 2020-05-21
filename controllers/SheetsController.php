@@ -237,7 +237,10 @@ public function getnpt(){
 	
 }
 
-
+public function registernpt(){
+	$personality = new PersonalityController();
+	$personality->register();
+}
 
 
 
