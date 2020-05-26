@@ -6,6 +6,7 @@ class NetworkController extends \lithium\action\Controller {
 
 	 protected function _init() {
   parent::_init();
+
   $this->_render['layout'] = 'default';
  }
 	public function index($month = null){

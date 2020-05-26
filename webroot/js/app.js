@@ -440,3 +440,35 @@ if (vals) {
  });
 	
 }
+
+function referName(_id, Name){
+	$$("#ReferName").val(_id);
+	$$("#userName").val(Name);
+	console.log($$("#ReferName").val());
+	console.log($$("#userName").val());
+}
+
+function AddUserUnder(){
+	var userName = $$("#userName").val();
+	var referName = $$("#ReferName").val();
+	var monthJoin = $$("#monthJoinRefer").val();
+	console.log(userName);
+	console.log(referName);
+	console.log(monthJoin);
+	app.preloader.show();
+
+	var submitURL = server + 'network/addUser/';
+ var formData = new FormData();
+	formData.append('userName', userName);
+	formData.append('referName', referName);
+	formData.append('monthJoin', monthJoin);
+
+ app.request.post(submitURL, formData, function (data) {
+	  app.preloader.hide();
+			app.views.main.router.navigate('/network/index/12/');	
+ }, function () {
+  toastTopNoInternet.open();
+  app.preloader.hide();
+ });
+	
+}

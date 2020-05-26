@@ -27,7 +27,7 @@ $who = split("-",$n['Name']);
 //<?=($k-$i+1)*100; // . to be included in f:
 
 ?>
-							[{v:'<?=$n['MCA']?>', f:'<b style="color:red"><?=$who[0];?></b>-<?=$who[1];?> (<?=$n["Month"];?>)'}, '<?=$n['Refer']?>',''],
+		[{v:'<?=$n['MCA']?>', f:'<b style="color:red"><a href="#" class="popup-open" data-popup=".popup-add" onclick="referName(\'<?=$n['_id']?>\',\'<?=$who[0];?>\')"><?=$who[0];?></b>- <?=$who[1];?></a> (<?=$n["Month"];?>)'}, '<?=$n['Refer']?>',''],
 <?php
 $i++;
 } ?>
@@ -54,7 +54,39 @@ $i++;
 
   <div id="chart_div" style="font-size:12px"></div>
 		
-		
+<div class="popup popup-add">
+    <div class="block">
+      <p>Add <a class="link popup-close right" href="#"><i class="icon f7-icons color-red">xmark</i></a></p>
+      <!-- Close Popup -->
+						<div class="list no-hairlines-md">
+						<ul>
+							<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-input-wrap">
+													<input type="text" placeholder="Name " name="userName" id="userName">
+													<span class="input-clear-button"></span>
+											</div>
+									</div>
+							</li>
+							<li> Select Month:
+							<select id="monthJoinRefer" name="monthJoinRefer">
+							<?php for($i = 0; $i<=12;$i++){?>
+								<option value="<?=$i?>"><?=$i?></option>
+							<?php } ?>
+							</select>
+							</li>
+							<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-input-wrap">
+													<input type="hidden" placeholder="Refer " name="ReferName" id="ReferName">
+													<span class="input-clear-button"></span>
+											</div>
+									</div>
+							</li>
+				</ul>
+					<a href="#" class="link external button button-round button-outline" onclick="return AddUserUnder();">Add</a>
+						</div>
+</div>		
 <div class="popup popup-about">
     <div class="block">
       <p>Add <a class="link popup-close right" href="#"><i class="icon f7-icons color-red">xmark</i></a></p>
@@ -88,3 +120,7 @@ $i++;
 	</div>
     </div>
   </div>
+		
+		
+<script>
+</script>
