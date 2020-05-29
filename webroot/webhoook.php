@@ -6,7 +6,7 @@ if (isset($_GET['hub_verify_token'])) {
         echo $_GET['hub_challenge'];
         return;
     } else {
-        echo 'Invalid Verify Token';
+        echo '1281640285';
         return;
     }
 }
