@@ -53,7 +53,7 @@ $i++;
 		<a class="popup-open" href="#" data-popup=".popup-about"><i class="icon f7-icons">plus</i></a>
 
   <div id="chart_div" style="font-size:12px"></div>
-		
+		<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
 <div class="popup popup-add">
     <div class="block">
       <p>Add <a class="link popup-close right" href="#"><i class="icon f7-icons color-red">xmark</i></a></p>
@@ -120,7 +120,5 @@ $i++;
 	</div>
     </div>
   </div>
-		
-		
-<script>
-</script>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
