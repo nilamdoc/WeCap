@@ -40,6 +40,7 @@
 			</div>
 		</div>
 </div>
+					<?php echo $this->_render('element', 'footer', compact('pagetotaltime'));?>	
 	<script src="/framework7/js/framework7.bundle.js"></script>
 	<script src="/js/app.js"></script>
 	<script>

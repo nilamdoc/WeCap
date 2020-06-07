@@ -2,11 +2,11 @@
 
 /* validate verify token needed for setting up web hook */ 
 if (isset($_GET['hub_verify_token'])) { 
-    if ($_GET['hub_verify_token'] === 'YOUR_SECRET_TOKEN') {
+    if ($_GET['hub_verify_token'] === FB_YOUR_SECRET_TOKEN) {
         echo $_GET['hub_challenge'];
         return;
     } else {
-        echo '1281640285';
+        echo 'Invalid Verify Token';
         return;
     }
 }
@@ -18,7 +18,7 @@ if (isset($input['entry'][0]['messaging'][0]['sender']['id'])) {
     $sender = $input['entry'][0]['messaging'][0]['sender']['id']; //sender facebook id
     $message = $input['entry'][0]['messaging'][0]['message']['text']; //text that user sent
 
-    $url = 'https://graph.facebook.com/v2.6/me/messages?access_token=PAGE_ACCESS_TOKEN';
+    $url = 'https://graph.facebook.com/v2.6/me/messages?access_token='.FB_PAGE_ACCESS_TOKEN;
 
     /*initialize curl*/
     $ch = curl_init($url);

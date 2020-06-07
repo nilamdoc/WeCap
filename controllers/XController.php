@@ -28,6 +28,18 @@ class XController extends \lithium\action\Controller {
 		
 		
 	}
+	public function privacy(){
+		
+		
+	}
+	public function terms(){
+		
+		
+	}
+	public function support(){
+		
+		
+	}
 	public function discovery(){
 		
 		
