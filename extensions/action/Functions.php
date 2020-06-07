@@ -15,6 +15,8 @@ use \Swift_Mailer;
 use \Swift_Message;
 use \Swift_Attachment;
 
+use Twilio\Rest\Client;
+
 
 class Functions extends \lithium\action\Controller {
 
@@ -504,7 +506,19 @@ curl_close($curl);
    Notifications::create()->save($data);    
  return true;
  }
- 
+
+
+public function twilio_api($mobile,$message){
+			
+$sid    = TWILIO_ACCOUNT_SID;
+$token  = TWILIO_AUTH_TOKEN;
+$twilio = new Client($sid, $token);
+
+$message = $twilio->messages->create($mobile, // to
+																																					["body" => $message, "from" => TWILIO_MOBILE]
+																																				);
+return true;
+} 
 	
 }
 ?>
