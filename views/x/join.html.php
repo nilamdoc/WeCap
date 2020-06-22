@@ -20,7 +20,7 @@
 	<a href="https://sff.team/img/documents/Raftaar.pdf" class="link external">Download</a>
 	</div>
 
-<br><a href="https://forms.gle/7bfp82eRuM3JZb1y7" class="link external  button button-round button-outline color-black button-fill" >I want to join the inner circle</a><br><br>
+<br><a href="https://docs.google.com/forms/d/e/1FAIpQLSd4k4i-MRosm_u_CnD1IyeCSjYe_h4kbIEL7c7QHvhVLkWtVw/viewform?usp=sf_link" class="link external  button button-round button-outline color-black button-fill" >I want to join the inner circle</a><br><br>
 
 </div>
 	
