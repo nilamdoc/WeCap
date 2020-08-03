@@ -81,6 +81,6 @@ if (file_exists($file = LITHIUM_LIBRARY_PATH . '/autoload.php')) {
 }
 
 Libraries::add('google-apiclient', array( 	'bootstrap' => 'src/Google/Client.php' ));
-//Libraries::add('google', array( 	'bootstrap' => 'apiclient-services/src/Google/Service/Youtube.php' ));
+Libraries::add('google', array( 	'bootstrap' => 'apiclient-services/src/Google/Service/Youtube.php' ));
 Libraries::add('twilio', array(	'bootstrap' => 'sdk/src/Twilio/autoload.php'));
 ?>
