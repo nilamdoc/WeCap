@@ -31,7 +31,8 @@ class YController extends \lithium\action\Controller {
 		define('OAUTH_CLIENT_SECRET',$oauthClientSecret);
 		define('REDIRECT_URL',$redirectURL);
 		define('BASE_URL',$baseURL);
-
+		
+		session_destroy();
 		if(!session_id()) session_start();
 
 		$client = new Google_Client();
@@ -39,7 +40,7 @@ class YController extends \lithium\action\Controller {
 		$client->setClientSecret(OAUTH_CLIENT_SECRET);
 		$client->setScopes('https://www.googleapis.com/auth/youtube');
 		$client->setRedirectUri(REDIRECT_URL);
-
+		$client->revokeToken();
 		
 		if($this->request->data){
 				
