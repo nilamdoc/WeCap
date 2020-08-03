@@ -92,7 +92,6 @@ class Google_Client
    */
   public function __construct(array $config = array())
   {
-print_r();  
   $this->config = array_merge(
         [
           'application_name' => '',
