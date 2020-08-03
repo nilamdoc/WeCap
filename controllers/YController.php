@@ -157,7 +157,7 @@ if (isset($_SESSION[$tokenSessionKey])) {
         $client->setDefer(true);
     
         // Create a request for the API's videos.insert method to create and upload the video.
-								$youtube = Google_Service_YouTube();
+								$youtube = new Google_Service_YouTube();
         $insertRequest = $youtube->videos->insert("status,snippet", $video);
     
         // Create a MediaFileUpload object for resumable uploads.
