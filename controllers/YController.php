@@ -7,6 +7,7 @@ use app\models\Users;
 use app\models\Videos;
 use lithium\storage\Session;
 use Google_Service_YouTube;
+use Google_Service_YouTube_VideoSnippet;
 use Google_Client;
 
 class YController extends \lithium\action\Controller {
