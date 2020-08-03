@@ -39,7 +39,6 @@ class YController extends \lithium\action\Controller {
 		$client->setClientSecret(OAUTH_CLIENT_SECRET);
 		$client->setScopes('https://www.googleapis.com/auth/youtube');
 		$client->setRedirectUri(REDIRECT_URL);
-		$youtube = new Google_Service_YouTube($client);
 
 		
 		if($this->request->data){
@@ -157,7 +156,8 @@ if (isset($_SESSION[$tokenSessionKey])) {
         // Setting the defer flag to true tells the client to return a request which can be called
         // with ->execute(); instead of making the API call immediately.
         $client->setDefer(true);
-    
+								$youtube = new Google_Service_YouTube($client);
+						
         // Create a request for the API's videos.insert method to create and upload the video.
 		      $insertRequest = $youtube->videos->insert("status,snippet", $video);
     
