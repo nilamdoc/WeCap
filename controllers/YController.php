@@ -107,6 +107,9 @@ if (isset($_SESSION[$tokenSessionKey])) {
   $htmlBody = '';
   try{
     // REPLACE this value with the path to the file you are uploading.
+				$videoData = Videos::find('first',array(
+					'order' => array('_id'=>'ASC')
+				));
     $videoPath = 'videos/'.$videoData['file_name'];
     
     if(!empty($videoData['youtube_video_id'])){
@@ -120,9 +123,7 @@ if (isset($_SESSION[$tokenSessionKey])) {
         // Create an asset resource and set its snippet metadata and type.
         // This example sets the video's title, description, keyword tags, and
         // video category.
-								$videoData = Videos::find('first',array(
-									'order' => array('_id'=>'ASC')
-								));
+
         $snippet = new Google_Service_YouTube_VideoSnippet();
         $snippet->setTitle($videoData['title']);
         $snippet->setDescription($videoData['description']);
