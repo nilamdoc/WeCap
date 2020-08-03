@@ -17,9 +17,7 @@ class YController extends \lithium\action\Controller {
  }
 
 	public function upload(){
-
-			if($this->request->data){
-				
+	
 		$oauthClientID     = GOOGLE_PROJECT_CLIENT_ID;
 		$oauthClientSecret = GOOGLE_PROJECT_CLIENT_SECRET;
 		$baseURL           = 'https://wecapacitate.com/y/';
@@ -37,8 +35,10 @@ class YController extends \lithium\action\Controller {
 		$client->setClientSecret(OAUTH_CLIENT_SECRET);
 		$client->setScopes('https://www.googleapis.com/auth/youtube');
 		$client->setRedirectUri(REDIRECT_URL);
+		
+		if($this->request->data){
 				
-    // Video info
+	   // Video info
     $title = $this->request->data['title'];
     $desc = $this->request->data['description'];
     $tags = $this->request->data['tags'];
@@ -83,16 +83,18 @@ class YController extends \lithium\action\Controller {
 				$videoData = Videos::find('first',array(
 					'conditions' => array('_id'=>(string)$insert)
 				));
-				// 			
+		}		// 			
 
 	$tokenSessionKey = 'token-' . $client->getAccessToken();
-if (isset($_GET['code'])) {
+	if (isset($_GET['code'])) {
   if (strval($_SESSION['state']) !== strval($_GET['state'])) {
     die('The session state did not match.');
   }
 
   $client->authenticate($_GET['code']);
-  $_SESSION[$tokenSessionKey] = $this->getAccessToken();
+		
+  $_SESSION[$tokenSessionKey] = $client->getAccessToken();
+		
   header('Location: ' . REDIRECT_URL);
 }
 
@@ -218,13 +220,11 @@ END;
 		print_r($state);
   $client->setState($state);
   $_SESSION['state'] = $state;
-
   $authUrl = $client->createAuthUrl();
-		
   return $this->redirect($authUrl);
 
 			}
 		}
-	}
+	//}
 }
 ?>
