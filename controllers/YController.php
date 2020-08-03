@@ -10,6 +10,7 @@ use Google_Service_YouTube;
 use Google_Service_YouTube_VideoSnippet;
 use Google_Service_YouTube_VideoStatus;
 use Google_Service_YouTube_Video;
+use Google_Http_MediaFileUpload;
 use Google_Client;
 
 class YController extends \lithium\action\Controller {
@@ -156,6 +157,7 @@ if (isset($_SESSION[$tokenSessionKey])) {
         $client->setDefer(true);
     
         // Create a request for the API's videos.insert method to create and upload the video.
+								$youtube = Google_Service_YouTube();
         $insertRequest = $youtube->videos->insert("status,snippet", $video);
     
         // Create a MediaFileUpload object for resumable uploads.
@@ -183,7 +185,11 @@ if (isset($_SESSION[$tokenSessionKey])) {
         $client->setDefer(false);
         
         // Update youtube video id to database
-        $db->update($videoData['id'], $status['id']);
+								$data = array(
+										'video_id'=>$status['id'],
+									);
+								$conditions = array('_id'=>$videoData['id']);
+        Videos::update($data,$conditions);
         
         // Delete video file from local server
         @unlink("videos/".$videoData['file_name']);
