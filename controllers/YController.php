@@ -232,7 +232,7 @@ END;
 } else {
   // If the user hasn't authorized the app, initiate the OAuth flow
   $state = mt_rand();
-		print_r($state);
+		print_r($state); exit;
   $client->setState($state);
   $_SESSION['state'] = $state;
   $authUrl = $client->createAuthUrl();
