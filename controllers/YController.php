@@ -122,7 +122,7 @@ class YController extends \lithium\action\Controller {
 END;
 		} else {
   // If the user hasn't authorized the app, initiate the OAuth flow
-		print_r("Auth");
+		//print_r("Auth");
   $state = mt_rand();
 		
   $client->setState($state);
@@ -130,7 +130,7 @@ END;
   $authUrl = $client->createAuthUrl();
   return $this->redirect($authUrl);
 
-			}
+		}
 		
 	}
 	
