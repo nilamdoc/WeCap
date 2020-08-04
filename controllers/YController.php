@@ -137,7 +137,7 @@ END;
 
 	public function upload(){
 	
-	if(session_id() != '') session_destroy();
+	
 		$oauthClientID     = GOOGLE_PROJECT_CLIENT_ID;
 		$oauthClientSecret = GOOGLE_PROJECT_CLIENT_SECRET;
 		$baseURL           = 'https://wecapacitate.com/y/';
