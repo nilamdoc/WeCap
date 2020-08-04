@@ -137,6 +137,7 @@ END;
 
 	public function upload(){
 	
+	if(session_id() != '') session_destroy();
 		$oauthClientID     = GOOGLE_PROJECT_CLIENT_ID;
 		$oauthClientSecret = GOOGLE_PROJECT_CLIENT_SECRET;
 		$baseURL           = 'https://wecapacitate.com/y/';
@@ -210,7 +211,7 @@ END;
 		}		// 			
 
 	$tokenSessionKey = 'token-' . $client->getAccessToken();
-	print_r($tokenSessionKey);exit;
+//	print_r($tokenSessionKey);exit;
 	if (isset($_GET['code'])) {
   if (strval($_SESSION['state']) !== strval($_GET['state'])) {
     die('The session state did not match.');
@@ -219,12 +220,14 @@ END;
   $client->authenticate($_GET['code']);
 		
   $_SESSION[$tokenSessionKey] = $client->getAccessToken();
+		print_r($client->getAccessToken());
 		
   header('Location: ' . REDIRECT_URL);
 	}
 
 	if (isset($_SESSION[$tokenSessionKey])) {
 			$client->setAccessToken($_SESSION[$tokenSessionKey]);
+			
 	}
 
 // Check to ensure that the access token was successfully acquired.
