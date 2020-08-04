@@ -148,7 +148,6 @@ END;
 		define('BASE_URL',$baseURL);
 		
 		
-		if(!session_id()) session_start();
 
 		$client = new Google_Client();
 		$client->setClientId(OAUTH_CLIENT_ID);
@@ -156,6 +155,10 @@ END;
 		$client->setScopes('https://www.googleapis.com/auth/youtube');
 		$client->setRedirectUri(REDIRECT_URL);
 		
+		// Define an object that will be used to make all API requests. 
+		$youtube = new Google_Service_YouTube($client); 
+		
+		if(!session_id()) session_start();
 		
 		if($this->request->data){
 				
@@ -205,7 +208,7 @@ END;
 					'conditions' => array('_id'=>(string)$insert)
 				));
 		}		// 			
-print_r($client);
+
 	$tokenSessionKey = 'token-' . $client->getAccessToken();
 	print_r($tokenSessionKey);exit;
 	if (isset($_GET['code'])) {
