@@ -16,8 +16,9 @@ if(isset($_GET['err'])){
 }
 ?>
 <div class="text-align-center">
+<h3>Upload a new video File</h3>
 <form method="post" enctype="multipart/form-data" action="/y/upload">
-    <?php echo (!empty($errorMsg))?'<p class="err-msg">'.$errorMsg.'</p>':''; ?>
+    <?php echo (!empty($errorMsg))?'<p class="err-msg text-color-red">'.$errorMsg.'</p>':''; ?>
 				
 				<div class="list inline-labels no-hairlines-md">
 					<ul>
