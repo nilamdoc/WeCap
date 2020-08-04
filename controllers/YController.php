@@ -205,7 +205,7 @@ END;
 					'conditions' => array('_id'=>(string)$insert)
 				));
 		}		// 			
-
+print_r($client);
 	$tokenSessionKey = 'token-' . $client->getAccessToken();
 	print_r($tokenSessionKey);exit;
 	if (isset($_GET['code'])) {
