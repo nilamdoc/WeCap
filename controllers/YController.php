@@ -40,7 +40,7 @@ class YController extends \lithium\action\Controller {
 		$client->setClientSecret(OAUTH_CLIENT_SECRET);
 		$client->setScopes('https://www.googleapis.com/auth/youtube');
 		$client->setRedirectUri(REDIRECT_URL);
-		$client->revokeToken();
+		
 		
 		if($this->request->data){
 				
