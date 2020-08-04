@@ -20,6 +20,122 @@ class YController extends \lithium\action\Controller {
   $this->_render['layout'] = 'default';
  }
 
+
+		public function uploadvideo(){
+			
+			$oauthClientID     = GOOGLE_PROJECT_CLIENT_ID;
+			$oauthClientSecret = GOOGLE_PROJECT_CLIENT_SECRET;
+			$baseURL           = 'https://wecapacitate.com/y/';
+			$redirectURL       = $baseURL.'uploadvideo';
+
+			if(!session_id()) session_start();
+			
+			$client = new Google_Client();
+			$client->setClientId($oauthClientID);
+			$client->setClientSecret($oauthClientSecret);
+			$client->setScopes('https://www.googleapis.com/auth/youtube');
+			$client->setRedirectUri($redirectURL);
+
+		if($_POST['file']){
+			print_r("File - Upload");
+			 $title = $this->request->data['title'];
+    $desc = $this->request->data['description'];
+    $tags = $this->request->data['tags'];
+    $privacy = !empty($this->request->data['privacy'])?$this->request->data['privacy']:'unlisted';
+    
+    // Check whether file field is not empty
+    if($this->request->data["file"]["name"] != ''){
+        // File upload path
+        $fileName = str_shuffle('codexworld').'-'.basename($this->request->data["file"]["name"]);
+        $filePath = "videos/".$fileName;
+
+        // Check the file type
+        $allowedTypeArr = array("video/mp4", "video/avi", "video/mpeg", "video/mpg", "video/mov", "video/wmv", "video/rm");
+        if(in_array($this->request->data['file']['type'], $allowedTypeArr)){
+            // Upload file to local server
+            if(move_uploaded_file($_FILES['file']['tmp_name'], $filePath)){
+                // Insert video data in the database
+                $vdata = array(
+                    'title' => $title,
+                    'description' => $desc,
+                    'tags' => $tags,
+                    'privacy' => $privacy,
+                    'file_name' => $fileName
+                );
+                $insert = Videos::create();
+																$insert->save($vdata);
+                // Store db row id in the session
+																Session::write('uploadedFileId',$insert);
+            }else{
+                header("Location:".BASE_URL."upload?err=ue");
+                exit;
+            }
+        }else{
+            header("Location:".BASE_URL."upload?err=fe");
+            exit;
+        }
+    }else{
+        header('Location:'.BASE_URL.'upload?err=bf');
+        exit;
+    }
+
+				$videoData = Videos::find('first',array(
+					'conditions' => array('_id'=>(string)$insert)
+				));
+			
+		}
+			if (isset($_GET['code'])) {
+				$tokenSessionKey = 'token-' . $client->getAccessToken();
+			}
+			if (isset($_GET['code'])) {
+				if (strval($_SESSION['state']) !== strval($_GET['state'])) {
+					die('The session state did not match.');
+				}
+				$client->authenticate($_GET['code']);
+				$_SESSION[$tokenSessionKey] = $client->getAccessToken();
+				header('Location: ' . $redirectURL);
+			}
+
+			if (isset($_SESSION[$tokenSessionKey])) {
+					$client->setAccessToken($_SESSION[$tokenSessionKey]);
+			}
+		if ($client->getAccessToken()) {
+			$htmlBody = '';
+			try{
+				
+				}	catch (Google_Service_Exception $e) {
+    $htmlBody .= sprintf('<p>A service error occurred: <code>%s</code></p>',
+        htmlspecialchars($e->getMessage()));
+				} catch (Google_Exception $e) {
+    $htmlBody .= sprintf('<p>An client error occurred: <code>%s</code></p>',
+        htmlspecialchars($e->getMessage()));
+    $htmlBody .= 'Please reset session <a href="logout.php">Logout</a>';
+				}
+			 $_SESSION[$tokenSessionKey] = $client->getAccessToken();
+		}else if(OAUTH_CLIENT_ID == '') {
+  $htmlBody = <<<END
+				<h3>Client Credentials Required</h3>
+				<p>
+						You need to set <code>\$oauthClientID</code> and
+						<code>\$oauthClientSecret</code> before proceeding.
+				<p>
+END;
+		} else {
+  // If the user hasn't authorized the app, initiate the OAuth flow
+		print_r("Auth");
+  $state = mt_rand();
+		
+  $client->setState($state);
+  $_SESSION['state'] = $state;
+  $authUrl = $client->createAuthUrl();
+  return $this->redirect($authUrl);
+
+			}
+		
+	}
+	
+	
+
 	public function upload(){
 	
 		$oauthClientID     = GOOGLE_PROJECT_CLIENT_ID;
@@ -102,11 +218,11 @@ class YController extends \lithium\action\Controller {
   $_SESSION[$tokenSessionKey] = $client->getAccessToken();
 		
   header('Location: ' . REDIRECT_URL);
-}
+	}
 
-if (isset($_SESSION[$tokenSessionKey])) {
-  $client->setAccessToken($_SESSION[$tokenSessionKey]);
-}
+	if (isset($_SESSION[$tokenSessionKey])) {
+			$client->setAccessToken($_SESSION[$tokenSessionKey]);
+	}
 
 // Check to ensure that the access token was successfully acquired.
 	if ($client->getAccessToken()) {
@@ -232,7 +348,7 @@ END;
 } else {
   // If the user hasn't authorized the app, initiate the OAuth flow
   $state = mt_rand();
-		print_r($state); exit;
+		
   $client->setState($state);
   $_SESSION['state'] = $state;
   $authUrl = $client->createAuthUrl();
