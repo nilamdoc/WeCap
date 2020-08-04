@@ -20,6 +20,7 @@ class YController extends \lithium\action\Controller {
 			$this->_render['layout'] = 'default';
 		}
 
+		public function index(){}
 
 		public function uploadvideo(){
 			
@@ -195,15 +196,15 @@ END;
                 // Store db row id in the session
 																Session::write('uploadedFileId',$insert);
             }else{
-                header("Location:".BASE_URL."upload?err=ue");
+                header("Location:".BASE_URL."index?err=ue");
                 exit;
             }
         }else{
-            header("Location:".BASE_URL."upload?err=fe");
+            header("Location:".BASE_URL."index?err=fe");
             exit;
         }
     }else{
-        header('Location:'.BASE_URL.'upload?err=bf');
+        header('Location:'.BASE_URL.'index?err=bf');
         exit;
     }
 
@@ -364,8 +365,11 @@ END;
   $client->setState($state);
   $_SESSION['state'] = $state;
   $authUrl = $client->createAuthUrl();
-  return $this->redirect($authUrl);
-
+$htmlBody = <<<END
+  <h3>Authorization Required</h3>
+  <p>You need to <a href="$authUrl">authorize access</a> before proceeding.<p>
+END;
+return compact('htmlBody');
 			}
 		}
 	//}
