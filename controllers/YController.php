@@ -213,6 +213,10 @@ END;
 	$tokenSessionKey = 'token-' . $client->getAccessToken();
 //	print_r($tokenSessionKey);exit;
 	if (isset($_GET['code'])) {
+		print_r(strval($_SESSION['state']));
+		print_r("\n");
+		print_r(strval($_GET['state']);
+		
   if (strval($_SESSION['state']) !== strval($_GET['state'])) {
     die('The session state did not match.');
   }
