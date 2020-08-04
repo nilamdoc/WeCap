@@ -16,9 +16,9 @@ use Google_Client;
 class YController extends \lithium\action\Controller {
 
 	 protected function _init() {
-  parent::_init();
-  $this->_render['layout'] = 'default';
- }
+			parent::_init();
+			$this->_render['layout'] = 'default';
+		}
 
 
 		public function uploadvideo(){
@@ -37,7 +37,7 @@ class YController extends \lithium\action\Controller {
 			$client->setRedirectUri($redirectURL);
 
 		if($_POST['file']){
-			print_r("File - Upload");
+			
 			 $title = $this->request->data['title'];
     $desc = $this->request->data['description'];
     $tags = $this->request->data['tags'];
@@ -124,7 +124,6 @@ END;
   // If the user hasn't authorized the app, initiate the OAuth flow
 		//print_r("Auth");
   $state = mt_rand();
-		
   $client->setState($state);
   $_SESSION['state'] = $state;
   $authUrl = $client->createAuthUrl();
@@ -208,6 +207,7 @@ END;
 		}		// 			
 
 	$tokenSessionKey = 'token-' . $client->getAccessToken();
+	print_r($tokenSessionKey);exit;
 	if (isset($_GET['code'])) {
   if (strval($_SESSION['state']) !== strval($_GET['state'])) {
     die('The session state did not match.');
