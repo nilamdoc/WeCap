@@ -369,7 +369,7 @@ $htmlBody = <<<END
   <h3>Authorization Required</h3>
   <p>You need to <a href="$authUrl">authorize access</a> before proceeding.<p>
 END;
-return compact('htmlBody');
+	return compact('htmlBody');
 			}
 		}
 	//}
