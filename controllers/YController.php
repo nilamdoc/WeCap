@@ -366,11 +366,9 @@ END;
   $client->setState($state);
   $_SESSION['state'] = $state;
   $authUrl = $client->createAuthUrl();
-$htmlBody = <<<END
-  <h3>Authorization Required</h3>
-  <p>You need to <a href="$authUrl" class="link external">authorize access</a> before proceeding.<p>
-END;
-	return compact('htmlBody');
+		$htmlBody = '<h3>Authorization Required</h3>
+  <p>You need to <a href="'.$authUrl.'" class="link external">authorize access</a> before proceeding.<p>';
+		return compact('htmlBody');
 			}
 		}
 	//}
