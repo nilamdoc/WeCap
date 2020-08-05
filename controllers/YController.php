@@ -218,7 +218,7 @@ END;
 	if (isset($_GET['code'])) {
 		print_r(strval($_SESSION['state']));
 		print_r("\n");
-		print_r(strval($_GET['state']));
+		print_r(strval($_GET['state']));exit;
 		
   if (strval($_SESSION['state']) !== strval($_GET['state'])) {
     die('The session state did not match.');
@@ -243,6 +243,7 @@ END;
   try{
     // REPLACE this value with the path to the file you are uploading.
 				$videoData = Videos::find('first',array(
+					'conditions'=>array('_id'=>(string)$_SESSION['uploadedFileId']),
 					'order' => array('_id'=>'ASC')
 				));
     $videoPath = 'videos/'.$videoData['file_name'];
