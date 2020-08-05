@@ -367,7 +367,7 @@ END;
   $authUrl = $client->createAuthUrl();
 $htmlBody = <<<END
   <h3>Authorization Required</h3>
-  <p>You need to <a href="$authUrl">authorize access</a> before proceeding.<p>
+  <p>You need to <a href="$authUrl" class="link external">authorize access</a> before proceeding.<p>
 END;
 	return compact('htmlBody');
 			}
