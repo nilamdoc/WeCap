@@ -1,1 +1,0 @@
-<Response><Say voice="woman">Your verification OTP. <?=$newcode?>, I repeat <?=$newcode?>. Again! <?=$newcode?>.</Say></Response>

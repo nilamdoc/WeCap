@@ -39,7 +39,7 @@ require __DIR__ . '/bootstrap/libraries.php';
  * rules of the `ErrorHandler` class to provide a high level of control over managing exceptions in
  * your application, with no impact on framework or application code.
  */
- require __DIR__ . '/bootstrap/errors.php';
+// require __DIR__ . '/bootstrap/errors.php';
 
 /**
  * This file defines bindings between classes which are triggered during the request cycle, and
@@ -59,13 +59,13 @@ if (PHP_SAPI !== 'cli') {
 /**
  * Include this file if your application uses one or more database connections.
  */
- require __DIR__ . '/bootstrap/connections.php';
+// require __DIR__ . '/bootstrap/connections.php';
 
 /**
  * This file contains configuration for session (and/or cookie) storage, and user or web service
  * authentication.
  */
- require __DIR__ . '/bootstrap/session.php';
+// require __DIR__ . '/bootstrap/session.php';
 
 /**
  * This file contains your application's globalization rules, including inflections,

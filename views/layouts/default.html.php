@@ -1,49 +1,43 @@
-<?php
-/**
- * 
- *
- * DO NOT CHANGE THIS FILE.. IT HAS BEEN ACHIVED BY A LOT OF RESEARCH
- * -----------NILAM DOCTOR-------------------------------------------
- * 
- */
+<!doctype html>
+<?php 
+	$mtime = microtime();
+	$mtime = explode(" ",$mtime);
+	$mtime = $mtime[1] + $mtime[0];
+	$pagestarttime = $mtime; 
 
 ?>
-<!doctype html>
 <html>
+
 <head>
-	<?php echo $this->html->charset();?>
-	<title>WeCapacitate &gt; <?php echo $this->title(); ?></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Raleway|Roboto+Mono|Comix_Neue&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="/framework7/css/framework7.bundle.min.css" rel="stylesheet" type="text/css">
-	<link href="/css/icons.css" rel="stylesheet" type="text/css">
-	<link href="/css/app.css" rel="stylesheet" type="text/css">
-	<link href="/favicon.ico" title="Icon" type="image/x-icon" rel="icon" />  
-</head>
+  <title>WeCapacitate - Alone we're nothting, together WeCapacitate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Raleway:wght@100;300;400&family=Share&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/framework7/css/framework7-bundle.min.css">
+  <link rel="stylesheet" href="/css/app.css" type="text/css">
+  <link rel="stylesheet" href="/css/framework7-icons.css" type="text/css">
+  </head>
+
 <body>
-<div id="app">
-		<div class="view  view-main">
-		 <div data-name="home" class="page">
-				<div class="block">
-					<?php if($this->_request->controller!="Pages"){?>
-					<?php echo $this->_render('element', 'header', compact('pagetotaltime'));?>	
-					<?php }?>
-				</div>
-				<div class="page-content block">
-					<?php echo $this->content(); ?>
-					<hr>
-					<div class="footer Rale">
-						<p>&copy; WeCapacitate <?php echo date('Y') ?></p>
-					</div>
-				</div>
-			</div>
-		</div>
-</div>
-					<?php echo $this->_render('element', 'footer', compact('pagetotaltime'));?>	
-	<script src="/framework7/js/framework7.bundle.js"></script>
-	<script src="/js/app.js"></script>
-	<script>
-	</script>
+ <div class="page" id="app">
+  <?php echo $this->_render('element', 'header', compact('pagetotaltime'));?>
+  <div class="page-content">
+  <?php echo $this->content(); ?>
+  
+<?php 
+	$mtime = microtime();
+	$mtime = explode(" ",$mtime);
+	$mtime = $mtime[1] + $mtime[0];
+	$pageendtime = $mtime;
+	$pagetotaltime = ($pageendtime - $pagestarttime);
+?>
+   
+   <?php echo $this->_render('element', 'footer', compact('pagetotaltime'));?>	
+  </div>
+  </div>
+<!-- JS code -->
+<script src="/framework7/js/framework7-bundle.min.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>

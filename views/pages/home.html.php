@@ -1,40 +1,23 @@
-<h1 class="Rale text-align-center sz6">We <span class="text-color-red">Capacitate</span></h1>
+<div style="margin-top:40px" class="block ">
+ <p>&nbsp;</p>
+ <div class="Banner-Section">
+  <div class="Banner-SubTitle">Just for You</div>
+  <div class="Banner-Title">An Extreme System for Professional Growth for <span class="maroon">You and Your Business</span></div>
+  <div class="Banner-SubTitle">Technology with Web Support, Marketing Strategy, Social Networking included</div>
+  <div class="Banner-Para">Whether you’re a student, business man, an employee or you want to start a new journey of life, we have an magnificient system for everyone! A system that will help you create and take your life and growth to a whole new level! <br><div class="Banner-SubTitle">Grow Your Business or Career with Confidence!</div></div>
+  <div style="display: inline-block"><a href="#info" class="link external"><div class="wecap-button">Show me more...</div></a></div>
+  	<div class="wecap-icon" ><img src="img/wecap-man.png" alt="The Ultimate Coaching System is here for you"  title="The Ultimate Coaching System is here for you"></div>
+ </div>
+ 
+ <div class="Banner2-Section" id="info">
+ <p>&nbsp;</p>
+ <div class="Banner2-Title">Sparkle your Professional Career</div>
+ <div class="Banner2-Para">You are an SME or are have a professional career or a rising star, all of us face challenges, one way or other. Everyone has an ebb and a tide, occassionaly in their life. WeCapacitate you, we entitle, we qualify, we enable you to a new level of opportunites. No barriers in your life are impossible to overcome.
+ <span>Motivation is available all across the internet. We transform you first. You analyze yourself. Your power is your mind. <strong>10<sup>x</sup></strong> it. Improve your decisions. You will always in excel in every situation.
+ </span>
 
-<div class="Bebas sz4 text-align-center">
+ The most powerful, proven system will teach you right from understanding who you are as a person all the way to creating your ultimate Success Blueprint. And that’s not all, after all this, we’re working with you to ensure you’re producing results!</div>
+ <div class="Banner2-SubTitle"><a href="#process" class="link external " ><span class="Banner2-button">Let’s see how it works</span></a></div>
+ </div>
 
-I would like to attend the discovery and preview session.
 </div>
-<div class="block text-align-center">
-<a href="" class="color-red Bebas  sz5 popup-open link color-blue" data-popup=".popup-about">FREE Webinar</a>
-</div>
-
-<div class="block text-align-center">
-I am already a member of the inner circle
-</div>
-
-
-			<div class="popup popup-about">
-					<div class="block">
-					<p><a class="link popup-close" href="#">Close popup</a></p>
-						<div class="videoWrapper">
-				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScbd34xKiKKcJIbi6K5N38eZXQCy_Splmyzi2CeZOsFb7s5yQ/viewform?embedded=true" width="640" height="1024" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-						</div>
-					</div>
-			</div>
-
-
-<style>
-.videoWrapper {
-	position: relative;
-	padding-bottom: 100%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-</style>
