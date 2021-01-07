@@ -103,3 +103,45 @@ div{
 .Banner2-Para{color: #28324E;font-family:"Raleway-Medium";font-size:calc(1em + .6vw);text-align:center;padding:50px}
 .Banner2-Para span{;display: inline-block;}
 .Banner2-button{font-family:"Montserrat-Bold";font-size:30px}
+
+.Banner-Sub{color: #000;font-family:"BebasNeue-Regular";font-size:calc(1em + 4vw);text-align:center;padding-bottom:1%;}
+
+.process{padding-bottom:116px;text-align:center;position:relative;display:inline-block;margin:auto;width:80%;padding-top:50px}
+.process-title{color: #39424a;font-family:"Montserrat-Bold";font-size:calc(1em + 4vw);text-align:center;line-height:100%;width:100%;display: inline-block;}
+.process-subtitle{color: #ff8400;font-family:"Raleway-Medium";font-size:calc(1em + 3vw);text-align:center;width:100%;margin:2%;display: inline-block;}
+.process-para{color: #000000;font-family:"Raleway-Medium";font-size:calc(1em + 1vw);text-align:center;line-height:100%;margin: auto;}
+.theprocess-title {color: #ff8401;font-family:"Barlow-Bold";font-size:calc(1em + 1vw);text-align:left;line-height:100%;padding:36px 0px;;}
+.theprocess-para{color: #39414c;font-family:"Raleway-Medium";font-size:calc(1em + .6vw);text-align:left;line-height:100%;}
+.Process1{width: 100%;display: inline-block;border-bottom:1px solid #e6e3e3;}
+.process-img img{max-width:100%; position:relative; top:10px;}
+.Process1:last-child {  border-bottom:none;}
+
+.Banner3-Section {background-image:url('../img/Star.png');background-repeat:no-repeat; background-size:cover;padding:7px 0px 0px;background-color:#000000}
+.Banner3-Title{color: #A38F84;font-family:"BebasNeue-Regular";font-size:calc(1em + 4vw);text-align:center;padding-bottom:0%;}
+.Banner3-SubTitle{color: #ffffff;font-family:"Raleway-Medium";font-size:calc(1em + 2vw);text-align:center;padding-top:2px;cursor:pointer;}
+.Banner3-SubTitle a {color: #ffffff;text-decoration:none;}
+.Banner3-Para{color: #D1D5D8;font-family:"Raleway-Medium";font-size:calc(1em + .6vw);text-align:center;padding:10px}
+.Banner3-Para span{padding:40px 0px;display: inline-block;}
+.Banner3-button{font-family:"Montserrat-Bold";font-size:30px}
+
+.hero-image {
+  background-image: url("../img/Star2.png"); /* The image used */
+  background-color: #000000; /* Used if the image is unavailable */
+  height: 300px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.Mastermind-video{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.Mastermind-video iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
