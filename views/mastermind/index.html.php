@@ -12,13 +12,13 @@
  <div class="col-20"></div>
 </div>
 <div class="row " style="margin-top:10px">
- <div class="col-20"></div>
+ <div class="col-20 sz1 Share">17 January 2021, Sunday </div>
  <div class="col-60 text-align-center ">
  <div class="Banner-Section">
  <div style="display: inline-block" class="text-align-center"><a href="#info" class="link login-screen-open" data-login-screen=".login-screen"><div class="wecap-button text-align-center">Confirm My Attendance</div></a></div>
  </div>
  </div>
- <div class="col-20"></div>
+ <div class="col-20 sz1 Share">7:00 am to 8:30 am</div>
 </div>
 
 
