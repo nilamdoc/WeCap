@@ -62,7 +62,7 @@ define('LITHIUM_APP_PATH', dirname(dirname(__DIR__)));
  * directory as your application.
  */
 define('LITHIUM_LIBRARY_PATH', LITHIUM_APP_PATH . '/libraries');
-
+include_once ('/home/nilam/sffTeam.php');
 /**
  * Locate and load Lithium core library files.  Throws a fatal error if the core can't be found.
  * If your Lithium core directory is named something other than `lithium`, change the string below.

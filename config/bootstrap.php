@@ -59,7 +59,7 @@ if (PHP_SAPI !== 'cli') {
 /**
  * Include this file if your application uses one or more database connections.
  */
-// require __DIR__ . '/bootstrap/connections.php';
+ require __DIR__ . '/bootstrap/connections.php';
 
 /**
  * This file contains configuration for session (and/or cookie) storage, and user or web service

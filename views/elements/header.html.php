@@ -19,10 +19,51 @@
         <div><img src="/img/logo.png" height="50"></div>
         <div class="title Raleway sliding"><strong><span class="maroon">We</span><span class="gray">C</span><span class="maroon">apacitate</span></strong> - <small>Alone, we are nothing. Together <span class="maroon">We</span><span class="gray">C</span><span class="maroon">apacitate</span></small></div>
        <div class="right Raleway">
-       <a href="#" class="link Share">Login</a>
+       <a href="#" class="link Share login-screen-open" data-login-screen=".login-screen" >Login</a>
        </div>
       </div>
     </div>
 
 
-  
+<div class="login-screen">
+    <div class="view">
+      <div class="page">
+        <div class="page-content login-screen-content">
+          <div class="login-screen-title"><img src="/img/WeCapacitate.png" width="200"><br>
+          <div class="title Raleway sliding"><small>Alone, we are nothing. Together <span class="maroon">We</span><span class="gray">C</span><span class="maroon">apacitate</span></small></div></div>
+          <form  id="join" >
+            <div class="list">
+              <ul>
+      <li id="mcaNumberDiv">
+        <div class="item-content item-input">
+          <div class="item-inner">
+            <div class="item-title item-label">MCA Number</div>
+            <div class="item-input-wrap">
+              <input type="number" name="mcaNumber" id="mcaNumber" placeholder="MCA Number" required validate pattern="[0-9]*" data-error-message="Only numbers please!" max="99999999" min="10000000">
+            </div>
+          </div>
+        </div>
+      </li>
+                
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li><a class="list-button" href="#" onclick="return searchmca();">Sign In</a></li>
+              </ul>
+              <div class="block-footer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><a class="link login-screen-close" href="#">Close Login Screen</a></p>
+              </div>
+            </div>
+          </form>
+          <form class="list" id="claim">
+     <div id="MCAFound">
+     </div>
+    </form>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
