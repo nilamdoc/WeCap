@@ -18,8 +18,8 @@
       </div>
         <div><img src="/img/logo.png" height="50"></div>
         <div class="title Raleway sliding"><strong><span class="maroon">We</span><span class="gray">C</span><span class="maroon">apacitate</span></strong> - <small>Alone, we are nothing. Together <span class="maroon">We</span><span class="gray">C</span><span class="maroon">apacitate</span></small></div>
-       <div class="right Raleway">
-       <a href="#" class="link Share login-screen-open" data-login-screen=".login-screen" >Login</a>
+       <div class="right Raleway" id="WhichMenu">
+       
        </div>
       </div>
     </div>
@@ -67,3 +67,16 @@
     
   </div>
 
+<script>
+ 
+ if (localStorage[storage + ".mcaNumber"]) {
+  var mcaNumber = localStorage[storage + ".mcaNumber"];
+  console.log("mcaNumber");
+  var whichmenu = '<a href="/wecap/dashboard/'+mcaNumber+'/" class="link Share external"  >'+mcaNumber+'</a>';
+ }else{
+  console.log("mcaNumber not found");
+  var whichmenu = '<a href="#" class="link Share login-screen-open" data-login-screen=".login-screen" >Login</a>';
+ }
+ $$("#WhichMenu").html(whichmenu);
+ 
+</script>

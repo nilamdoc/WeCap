@@ -2,6 +2,7 @@ var $$ = Dom7;
 var app = new Framework7();
 var server = window.location.protocol+'//'+window.location.hostname +'/';
 var storage = "WeCap";
+
 document.addEventListener("backbutton", onBackKeyDown, false);
 function onBackKeyDown() {
  mainView.router.back();
@@ -179,7 +180,7 @@ function checkLogin() {
   var mcaNumber = localStorage[storage + ".mcaNumber"];
   var date = new Date();
   var yyyymm = formatYYYYMM(date);
-  var submitURL = mall_server + 'searchmca';
+  var submitURL = server + 'wecap/searchmca';
   var formData = new FormData();
   formData.append('mcaNumber', mcaNumber);
   app.preloader.show();
@@ -201,14 +202,14 @@ function checkLogin() {
     }
     app.preloader.hide();
     $$("#join").hide();
-    console.log('/user/' + mcaNumber + '/');
-    mainView.router.navigate('/user/' + mcaNumber + '/');
+    console.log('/wecap/dashboard/' + mcaNumber + '/');
+    window.location.href ='/wecap/dashboard/' + mcaNumber + '/';
     
-    console.log('/user/' + mcaNumber + '/');
+    console.log('/dashboard/' + mcaNumber + '/');
     
 //				showModalUser();
    } else {
-    $$("#join").show();
+//    $$("#join").show();
     app.preloader.hide();
    }
   }, function () {
@@ -216,6 +217,17 @@ function checkLogin() {
    app.preloader.hide();
   });
  } else {
-  $$("#join").show();
+//  $$("#join").show();
  }
+}
+function formatYYYYMM(date) {
+ var d = new Date(date),
+ month = '' + (d.getMonth() + 1),
+ day = '' + d.getDate(),
+ year = d.getFullYear();
+ if (month.length < 2)
+  month = '0' + month;
+ if (day.length < 2)
+  day = '0' + day;
+ return [year, month].join('-');
 }

@@ -17,6 +17,12 @@
   <link rel="stylesheet" href="/framework7/css/framework7-bundle.min.css">
   <link rel="stylesheet" href="/css/app.css" type="text/css">
   <link rel="stylesheet" href="/css/framework7-icons.css" type="text/css">
+
+<!-- JS code -->
+<script src="/framework7/js/framework7-bundle.min.js"></script>
+<script src="/js/app.js"></script>
+
+
   </head>
 
 <body>
@@ -36,8 +42,5 @@
    <?php echo $this->_render('element', 'footer', compact('pagetotaltime'));?>	
   </div>
   </div>
-<!-- JS code -->
-<script src="/framework7/js/framework7-bundle.min.js"></script>
-<script src="/js/app.js"></script>
 </body>
 </html>

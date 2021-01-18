@@ -131,5 +131,27 @@ public function sendotp(){
  }
  return $this->render(array('json' => array("success"=>"No")));  
 } 
+
+public function dashboard(){
+ 
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
