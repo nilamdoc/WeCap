@@ -19,7 +19,7 @@ class WecapController extends \lithium\action\Controller {
   // if($user==null){
    // return $this->redirect('/savings');
   // }
-  $this->_render['layout'] = 'sale';
+//  $this->_render['layout'] = 'sale';
  }
  public function index(){
    return compact('a');
@@ -132,10 +132,15 @@ public function sendotp(){
  return $this->render(array('json' => array("success"=>"No")));  
 } 
 
-public function dashboard(){
+ public function dashboard($mcaNumber = null){
+  $user = Users::find('first',array(
+   'conditions'=>array(
+    'mcaNumber'=>(string)$mcaNumber,
+    )
+  ));  
+  return compact('user');
  
- 
-}
+ }
 
 
 
